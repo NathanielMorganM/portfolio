@@ -1,14 +1,25 @@
 {
-  "name": "matthew-portfolio",
-  "version": "0.0.1",
-  "scripts": {
-	  "start": "http-server -c-1 --port 8080"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/NathanielMorganM/portfolio.git"
-  },
-  "dependencies": {
-    "http-server": "^0.12.3"
-  }
+	"name": "matthew-portfolio",
+	"version": "0.1.0",
+	"scripts": {
+		"start": "npm run build && http-server -c-1 --port 8080",
+		"test:js": "eslint js --ext js,mjs",
+		"test:scss": "stylelint scss/*.scss",
+		"test": "npm run test:js && npm run test:scss",
+		"build:css": "node-sass --source-map=true --output-style=compressed scss/ -o css/",
+		"build": "npm run build:css"
+	},
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/NathanielMorganM/portfolio.git"
+	},
+	"dependencies": {
+		"http-server": "^0.12.3"
+	},
+	"devDependencies": {
+		"eslint": "^7.27.0",
+		"node-sass": "^6.0.0",
+		"stylelint": "^13.13.1",
+		"stylelint-config-sass-guidelines": "^8.0.0"
+	}
 }

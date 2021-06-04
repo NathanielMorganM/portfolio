@@ -1,0 +1,14 @@
+@import "vars";
+
+.index__ {
+	&hero {
+		background-image: url("https://i.kym-cdn.com/entries/icons/original/000/016/546/hidethepainharold.jpg");
+		background-size: cover;
+		background-repeat: no-repeat;
+		background-position: center;
+	}
+
+	&wrp-intro {
+		background: transparentize($rgb-off-black, 0.3);
+	}
+}

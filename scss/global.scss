@@ -1,0 +1,8 @@
+@import "vars";
+
+// Change the color of text highlights
+::selection {
+	background: $rgb-off-black;
+	color: #fff;
+	text-shadow: none;
+}
